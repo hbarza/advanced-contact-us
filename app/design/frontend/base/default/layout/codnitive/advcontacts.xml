@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * CODNITIVE
+ *
+ * NOTICE OF LICENSE
+ *
+ * This source file is subject to the EULA
+ * that is bundled with this package in the file LICENSE_EULA.html.
+ * It is also available through the world-wide-web at this URL:
+ * http://www.codnitive.com/en/terms-of-service-softwares/
+ * http://www.codnitive.com/fa/terms-of-service-softwares/
+ *
+ * DISCLAIMER
+ *
+ * Do not edit or add to this file if you wish to upgrade to newer
+ * versions in the future.
+ *
+ * @category   Codnitive
+ * @package    Codnitive_Advcontacts
+ * @author     Hassan Barza <support@codnitive.com>
+ * @copyright  Copyright (c) 2012 CODNITIVE Co. (http://www.codnitive.com)
+ * @license    http://www.codnitive.com/en/terms-of-service-softwares/ End User License Agreement (EULA 1.0)
+ */
+-->
+<layout version="0.1.0">
+    <contacts_index_index>
+        <reference name="contactForm">
+            <action method="setTemplate" ifconfig="codnitivegeneral/advcontacts/active"><template>codnitive/advcontacts/form.phtml</template></action>
+            <block type="core/text_list" name="form.additional.info">
+                <block type="captcha/captcha" name="captcha">
+                    <reference name="head">
+                        <action method="addJs" ifconfig="codnitivegeneral/advcontacts/active"><file>mage/captcha.js</file></action>
+                    </reference>
+                    <action method="setFormId" ifconfig="codnitivegeneral/advcontacts/active"><formId>contacts</formId></action>
+                    <action method="setImgWidth" ifconfig="codnitivegeneral/advcontacts/active"><width>230</width></action>
+                    <action method="setImgHeight" ifconfig="codnitivegeneral/advcontacts/active"><width>50</width></action>
+                </block>
+            </block>
+        </reference>
+    </contacts_index_index>
+</layout>
